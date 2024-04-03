@@ -1,0 +1,62 @@
+@baseUrl = http://localhost:5000
+@urlPath = api/v1
+
+###
+GET {{baseUrl}}/{{urlPath}}/chat/message/conversation-list
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+###
+GET {{baseUrl}}/{{urlPath}}/chat/message/user/<receiverId>
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+###
+POST {{baseUrl}}/{{urlPath}}/chat/message
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{
+  "senderId": "57c1bf10-622b-42fd-a9ea-c2bb7f14c180",
+  "message": "Hi there8",
+  "roomId": "427c8201-4974-4eef-a910-423e060f2c1e"
+}
+
+###
+POST {{baseUrl}}/{{urlPath}}/chat/add-room
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{
+  "roomName": "duyhau",
+  "senderId": "57c1bf10-622b-42fd-a9ea-c2bb7f14c180",
+  "receiverIds": []
+}
+
+###
+POST {{baseUrl}}/{{urlPath}}/chat/add-room-participant
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{
+  "roomId": "cfbc510c-45a1-405f-b2e4-2874689f59aa",
+  "userId": "ae4c4ed7-2461-4f37-ad02-23cdafbe5256"
+}
+
+###
+GET {{baseUrl}}/{{urlPath}}/chat/rooms
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+
+###
+GET {{baseUrl}}/{{urlPath}}/user/profile/search/d
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
